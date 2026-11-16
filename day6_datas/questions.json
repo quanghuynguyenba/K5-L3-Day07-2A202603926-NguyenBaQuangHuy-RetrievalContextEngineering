@@ -1,0 +1,248 @@
+{
+  "description": "Benchmark ND-CP 13/2023 bao ve du lieu ca nhan (OCR text as stored). Dev 15+2 / Test 5+2; >=3 filter questions.",
+  "corpus": "13nd.signed.pdf (Nghi dinh 13/2023/ND-CP)",
+  "strategy": "A",
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "questions": [
+    {
+      "id": "q01",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Du lieu ca nhan duoc giai thich nhu the nao trong Nghi dinh nay?",
+      "expected_answer": "Thong tin gan lien voi mot con nguoi cu the hoac giup xac dinh mot con nguoi cu the; gom du lieu co ban va du lieu nhay cam.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 2,
+      "evidence_quote": "Dt lieu ca nhan la thong tin duoi dang ky hieu, cht viét, chu so, hinh anh, am thanh hoac dang turong ty tren moi truong dien tr gan lien voi mot con nguoi cu the"
+    },
+    {
+      "id": "q02",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Du lieu ca nhan co ban bao gom nhung thong tin nao ve ho ten va ngay sinh?",
+      "expected_answer": "Ho, chu dem va ten khai sinh, ten goi khac; ngay, thang, nam sinh; ngay chet hoac mat tich.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 2,
+      "evidence_quote": "a) Ho, chu dem va ten khai sinh, ten goi khac (néu c6);\nb) Ngay, thang, nam sinh; ngay, thang, nam chet hoac mat tich;"
+    },
+    {
+      "id": "q03",
+      "type": "dien_dat_lai",
+      "split": "dev",
+      "question": "Thong tin ve nguon goc chung toc, dan toc thuoc nhom du lieu nao?",
+      "expected_answer": "Du lieu ca nhan nhay cam (thong tin lien quan den nguon goc chung toc, dan toc).",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 3,
+      "evidence_quote": "Thong tin lien quan den nguon goc chung toc, nguon goc dan toc"
+    },
+    {
+      "id": "q04",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Ben thu ba la ai theo dinh nghia cua Nghi dinh?",
+      "expected_answer": "To chuc, ca nhan ngoai Chu the du lieu, Ben Kiem soat, Ben Xu ly, Ben Kiem soat va xu ly du lieu ca nhan duoc phep xu ly du lieu ca nhan.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 4,
+      "evidence_quote": "Ben thu ba la t6 chuc, ca nhan ngoai Chu thé du lieu, Ben Kiem soat du lieu ca nhan, Ben Xir ly dur lieu ca nhan"
+    },
+    {
+      "id": "q05",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Xu ly du lieu ca nhan tu dong la gi?",
+      "expected_answer": "Hinh thuc xu ly bang phuong tien dien tu nham danh gia, phan tich, du doan hoat vi, dia diem, xu huong, nang luc va cac truong hop khac.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 4,
+      "evidence_quote": "Xu ly du lieu ca nhan tu dong la hinh thurc xir ly du lieu ca nhan durgc thyc hien bang phuong tien dien t'r nham danh gia, phan tich, dy doan hoat vi"
+    },
+    {
+      "id": "q06",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Chuyen du lieu ca nhan ra nuoc ngoai duoc hieu nhu the nao?",
+      "expected_answer": "Su dung khong gian mang/thiet bi/phuong tien dien tu de chuyen du lieu cong dan Viet Nam toi dia diem nam ngoai lanh tho Viet Nam hoac xu ly o do.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 4,
+      "evidence_quote": "Chuyen du lieu ca nhan ra nuoc ngoai la hoat dong sur dung khong gian mang, thiét bi, phuong tien dien tur"
+    },
+    {
+      "id": "q07",
+      "type": "dieu_kien",
+      "split": "dev",
+      "question": "Du lieu ca nhan duoc luu tru trong bao lau?",
+      "expected_answer": "Chi trong khoang thoi gian phu hop voi muc dich xu ly, tru khi phap luat quy dinh khac.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 5,
+      "evidence_quote": "Du liéu ca nhan chi duoc luu tru trong khoang thoi gian phu hop voi muc dich xu ly dir lieu, tru truong hop phap luat co quy dinh khac."
+    },
+    {
+      "id": "q08",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Ai thong nhat quan ly nha nuoc ve bao ve du lieu ca nhan?",
+      "expected_answer": "Chinh phu.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 5,
+      "evidence_quote": "Chinh phu thong nhat quan ly nha nuoc ve bao ve du lieu ca nhan."
+    },
+    {
+      "id": "q09",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Dieu 6 noi ve viec ap dung Nghi dinh bao ve du lieu ca nhan nhu the nao?",
+      "expected_answer": "Thuc hien theo dieu uoc quoc te Viet Nam la thanh vien, cac quy dinh luat lien quan va Nghi dinh nay.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 6,
+      "evidence_quote": "Viec bao ve du lieu ca nhan dugc thyc hien theo quy dinh cac dieu uoc quoc te ma nuoc Cong hoa xa hoi chu nghia Viet Nam la thanh vien"
+    },
+    {
+      "id": "q10",
+      "type": "filter",
+      "split": "dev",
+      "question": "Trong phan quyen cua chu the du lieu, quyen duoc biet bao gom noi dung gi?",
+      "expected_answer": "Chu the du lieu duoc biet ve hoat dong xu ly du lieu ca nhan cua minh, tru truong hop luat quy dinh khac.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 7,
+      "evidence_quote": "Chu the du lieu dugc biét ve hoat dong xur ly du lieu ca nhan cua minh, tru truong hop luat co quy dinh khac.",
+      "filter": { "section": "page_7" }
+    },
+    {
+      "id": "q11",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Chu the du lieu co quyen dong y xu ly du lieu ca nhan nhu the nao?",
+      "expected_answer": "Duoc dong y hoac khong dong y cho phep xu ly du lieu ca nhan cua minh, tru truong hop Dieu 17.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 7,
+      "evidence_quote": "Chu the diu lieu dugc dong y hoac khong dong y cho phep xir ly du lieu ca nhan cua minh, trir truong hop quy dinh tai Diéu 17 Nghi dinh nay."
+    },
+    {
+      "id": "q12",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Khi chu the du lieu phan doi xu ly du lieu, ben kiem soat phai thuc hien yeu cau trong bao lau?",
+      "expected_answer": "Trong 72 gio sau khi nhan duoc yeu cau, tru khi luat quy dinh khac.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 8,
+      "evidence_quote": "thyc hien yeu cau cua chu the du lieu trong 72 gio sau khi nhan duoc yeu cau"
+    },
+    {
+      "id": "q13",
+      "type": "dieu_kien",
+      "split": "dev",
+      "question": "Su dong y cua chu the du lieu chi co hieu luc khi nao?",
+      "expected_answer": "Khi chu the tu nguyen va biet ro loai du lieu, muc dich, to chuc/ca nhan xu ly, quyen va nghia vu.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 9,
+      "evidence_quote": "Su dong y cua chu the du lieu chi co hieu luc khi chu the du lieu tu nguyen va biet ro cac noi dung sau:"
+    },
+    {
+      "id": "q14",
+      "type": "dieu_kien",
+      "split": "dev",
+      "question": "Trong truong hop khan cap de bao ve tinh mang, suc khoe, viec xu ly du lieu co can su dong y khong?",
+      "expected_answer": "Co the xu ly ngay du lieu lien quan de bao ve tinh mang, suc khoe cua chu the du lieu hoac nguoi khac (Dieu 17).",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 15,
+      "evidence_quote": "Trong truong hop khan cap, can xur ly ngay du lieu ca nhan co lien quan dé bao ve tinh mang, suc khoe cua chu the du lieu hoac nguoi khac."
+    },
+    {
+      "id": "q15",
+      "type": "filter",
+      "split": "dev",
+      "question": "Viec xu ly du lieu ca nhan cua tre em can dap ung yeu cau nao ve dong y?",
+      "expected_answer": "Phai bao ve quyen va loi ich tot nhat cua tre em; co su dong y cua tre em khi tre em tu do tuoi theo quy dinh.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 16,
+      "evidence_quote": "bao ve cac quyen va vi loi ich tot nhat cua tre em",
+      "filter": { "section": "page_16" }
+    },
+    {
+      "id": "q16",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Co quan chuyen trach bao ve du lieu ca nhan la co quan nao?",
+      "expected_answer": "Cuc An ninh mang va phong, chong toi pham su dung cong nghe cao - Bo Cong an.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 23,
+      "evidence_quote": "Co quan chuyen trach bao ve dur lieu ca nhan la Cuc An ninh mang va phong, chong toi pham su dung cong nghe cao - Bo Cong an"
+    },
+    {
+      "id": "q17",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Cac bien phap bao ve du lieu ca nhan bao gom nhung nhom nao?",
+      "expected_answer": "Bien phap quan ly, bien phap ky thuat, va bien phap do co quan quan ly nha nuoc thuc hien.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 22,
+      "evidence_quote": "Cac bien phap bao ve dur lieu ca nhan, bao gom:\na) Bien phap quan ly do to chuc, ca nhan co lien quan toi xur ly dt lieu ca nhan thuc hien;\nb) Bien phap ky thuat"
+    },
+    {
+      "id": "q18",
+      "type": "filter",
+      "split": "test",
+      "question": "Trong muc quyen phan doi xu ly du lieu, thoi han 72 gio duoc quy dinh o dau?",
+      "expected_answer": "Ben Kiem soat thuc hien yeu cau cua chu the du lieu trong 72 gio sau khi nhan yeu cau.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 8,
+      "evidence_quote": "thyc hien yeu cau cua chu the du lieu trong 72 gio sau khi nhan duoc yeu cau",
+      "filter": { "section": "page_8" }
+    },
+    {
+      "id": "q19",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Ben chuyen du lieu ra nuoc ngoai phai gui ho so danh gia tac dong cho Bo Cong an trong thoi han bao lau?",
+      "expected_answer": "Trong 60 ngay ke tu ngay tien hanh xu ly du lieu ca nhan.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 21,
+      "evidence_quote": "trong thoi gian 60 ngay ké tir ngay tién hanh xur ly du lieu ca nhan"
+    },
+    {
+      "id": "q20",
+      "type": "filter",
+      "split": "test",
+      "question": "Trong tai lieu PDF nay, Cong thong tin quoc gia ve bao ve du lieu ca nhan co nhiem vu gi ve tuyen truyen?",
+      "expected_answer": "Tuyen truyen, pho bien chinh sach, phap luat ve bao ve du lieu ca nhan.",
+      "gold_source_id": "13nd.signed",
+      "gold_page": 23,
+      "evidence_quote": "Tuyen truyen, pho bién chinh sach, phap luat ve bao ve dir lieu ca nhan",
+      "filter": { "document_type": "pdf" }
+    },
+    {
+      "id": "q21",
+      "type": "thieu_bang_chung",
+      "split": "dev",
+      "question": "Nghi dinh nay quy dinh muc phat bao nhieu dong neu vi pham quy dinh bao ve du lieu ca nhan?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "Van ban chi dinh nghia va quy tac xu ly; khong co bang muc phat / muc tien cu the."
+    },
+    {
+      "id": "q22",
+      "type": "thieu_bang_chung",
+      "split": "dev",
+      "question": "Cong ty ABC Soft duoc phep luu du lieu khach hang o Singapore theo Nghi dinh nay khong?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "Khong co bang chung ve cong ty ABC Soft hay truong hop chuyen du lieu cu the do."
+    },
+    {
+      "id": "q23",
+      "type": "thieu_bang_chung",
+      "split": "test",
+      "question": "Thoi gian hoan tien mua hang tren san thuong mai dien tu theo Nghi dinh nay la bao lau?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "Chu de hoan tien / TMĐT nam ngoai pham vi van ban bao ve du lieu ca nhan nay."
+    },
+    {
+      "id": "q24",
+      "type": "thieu_bang_chung",
+      "split": "test",
+      "question": "Dia chi email lien he cua Cuc An ninh mang de nop ho so danh gia tac dong la gi?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "Van ban chi ten co quan chuyen trach; khong ghi dia chi email lien he."
+    }
+  ]
+}

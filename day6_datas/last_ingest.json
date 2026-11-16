@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "content_pages": 39,
+  "total_characters": 57959,
+  "documents": 1,
+  "strategies": {
+    "A": {
+      "chunk_count": 145,
+      "avg_chunk_chars": 435.8,
+      "total_chars": 63196
+    },
+    "B": {
+      "chunk_count": 96,
+      "avg_chunk_chars": 603.1,
+      "total_chars": 57897
+    },
+    "C": {
+      "chunk_count": 96,
+      "avg_chunk_chars": 603.1,
+      "total_chars": 57897
+    }
+  },
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "embedding_dimensions": 384,
+  "ingest_seconds": 243.07,
+  "manifest_path": "E:\\AI_Vin\\K5-L3-Day06-NguyenBaQuangHuy-2A202603926-DataIngestionEngineering\\starter\\data\\manifest.json",
+  "warning": null,
+  "timestamp": "2026-11-14T05:08:48.699196+00:00"
+}
